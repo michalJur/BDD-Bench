@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bdd-bench-evaluation"
+version = "0.1.0"
+description = "Evaluation harness for code patches against BDD repositories."
+requires-python = ">=3.12"
+readme = "README.md"
+dependencies = [
+    "docker>=7.0.0",
+    "python-dotenv>=1.2.1",
+    "mini-swe-agent==2.4.5",
+    "litellm==1.93.0",
+    "tqdm>=4.67.1",
+]
+
+[tool.uv]
+python-preference = "only-system"
+managed = true
+
+[tool.ruff]
+line-length = 100
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

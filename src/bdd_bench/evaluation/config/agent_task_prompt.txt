@@ -1,0 +1,44 @@
+Task:
+You are fixing code in a Docker container. The repository starts from a clean,
+prepared baseline with the visible tests applied. You are continuing iterative
+development work on this repository. Earlier production changes may already be
+committed to that baseline. Treat the existing source as your starting point;
+refactor it if necessary so the behavior described by the visible tests is
+satisfied cleanly. Treat those tests as the behavioral specification, not just a
+checklist of assertions to satisfy.
+
+Testing:
+Use this command while implementing and debugging:
+$test_command
+
+Some test suites share global state across scenarios, so test ordering matters. A
+test that fails in the full suite but passes in isolation may be order-dependent,
+not flaky. Treat the full test command above as the source of truth and ensure it
+passes before submitting. If the test command fails because production code is
+incompatible with the preinstalled environment, treat that compatibility work as
+part of the task and fix the production code.
+
+Evaluation:
+Additional hidden behavioral tests will be applied during grading. They cover the
+same feature surface as the visible specification but exercise variations
+(different flags, modes, configurations, or edge cases) that the visible scenarios
+may not. Aim for a coherent implementation of the observable behavior implied by
+the visible tests and surrounding production code, rather than hardcoding only the
+literal visible scenarios.
+
+Editing constraints:
+Only modify production/source files needed to satisfy the specified behavior. Do
+not edit test code or test-related artifacts; if you are unsure whether a file is
+test-related, treat it as read-only. Do not create or modify environment/build
+configuration files (setup.py, setup.cfg, pyproject.toml, requirements*.txt,
+tox.ini, poetry.lock, etc.). The test dependencies are already installed; do not
+install packages or otherwise change the test environment. You may create new
+production source files if needed; they will be included in your submitted patch
+automatically.
+
+Submission:
+Your submission is the git diff of your changes against the baseline commit. Only
+production code changes will be allowed and evaluated.
+
+When finished, run exactly this command and stop:
+echo $done_marker

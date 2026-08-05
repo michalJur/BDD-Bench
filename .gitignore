@@ -1,0 +1,75 @@
+.claude
+.codex
+.tools/
+
+# Project outputs
+output*/
+notes/
+report/
+figures
+intermediate_instances.json
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+wheels/
+share/python-wheels/
+*.egg
+
+# Logs and cache
+*.log
+.cache/
+.pytest_cache/
+.tox/
+.nox/
+coverage.xml
+htmlcov/
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
+report/main.pdf
+
+# Environment files
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.uv/
+.uv_cache/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Notebook checkpoints
+.ipynb_checkpoints/

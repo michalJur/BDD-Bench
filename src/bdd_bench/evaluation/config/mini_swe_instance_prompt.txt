@@ -1,0 +1,8 @@
+Environment interaction:
+Briefly explain your reasoning, then issue at least one Bash tool call in every
+response. Each tool call runs in a fresh subshell, so working-directory and
+environment-variable changes do not persist between calls; include any required
+`cd` or environment assignments in each command. Read command results before
+deciding what to do next, and use non-interactive commands.
+
+{{ task }}
